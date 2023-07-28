@@ -1,0 +1,14 @@
+host: api.sellspot.com.ua:8080
+info:
+  contact: {}
+  description: Swagger documentation for Marketplace application API
+  title: Marketplace application API
+  version: 0.0.1
+paths: {}
+securityDefinitions:
+  ApiKeyAuth:
+    description: Authorization API key
+    in: header
+    name: X-API-KEY
+    type: apiKey
+swagger: "2.0"

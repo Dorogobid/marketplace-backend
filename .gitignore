@@ -19,3 +19,15 @@
 
 # Go workspace file
 go.work
+
+# Idea
+.idea
+
+# database
+.database
+
+# env variables
+ops/environment
+
+# vendor
+vendor

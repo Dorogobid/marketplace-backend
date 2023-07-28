@@ -1,0 +1,19 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documentation for Marketplace application API",
+        "title": "Marketplace application API",
+        "contact": {},
+        "version": "0.0.1"
+    },
+    "host": "api.sellspot.com.ua:8080",
+    "paths": {},
+    "securityDefinitions": {
+        "ApiKeyAuth": {
+            "description": "Authorization API key",
+            "type": "apiKey",
+            "name": "X-API-KEY",
+            "in": "header"
+        }
+    }
+}
