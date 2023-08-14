@@ -27,7 +27,8 @@ func (s *Server) setupServer() {
 	s.e.Use(middleware.Recover())
 	s.e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
 		Format: `{"time": "${time_rfc3339}", "method": "${method}", "uri": "${uri}", "status": "${status}", "remote_ip": "${remote_ip}"}` + "\n"}))
-
+	s.e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"*"}}))
 	s.setupRoutes()
 }
 
