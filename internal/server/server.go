@@ -3,6 +3,7 @@ package server
 import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"golang.org/x/crypto/acme/autocert"
 
 	svc "github.com/Dorogobid/marketplace-backend/internal/service"
 )
@@ -29,6 +30,8 @@ func (s *Server) setupServer() {
 		Format: `{"time": "${time_rfc3339}", "method": "${method}", "uri": "${uri}", "status": "${status}", "remote_ip": "${remote_ip}"}` + "\n"}))
 	s.e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"}}))
+	s.e.AutoTLSManager.Cache = autocert.DirCache("/var/www/.cache")
+
 	s.setupRoutes()
 }
 
@@ -37,5 +40,5 @@ func (s *Server) Logger() echo.Logger {
 }
 
 func (s *Server) Start(address string) error {
-	return s.e.Start(address)
+	return s.e.StartAutoTLS(address)
 }
