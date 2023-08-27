@@ -27,5 +27,5 @@ func Execute() {
 	service := svc.New(repo)
 
 	s := server.NewServer(service, conf.XAPIKey)
-	s.Logger().Fatal(s.Start(":8080"))
+	s.Logger().Fatal(s.Start(":80"))
 }
