@@ -4,7 +4,7 @@ import "github.com/Dorogobid/marketplace-backend/cmd"
 
 //	@title						Marketplace application API
 //	@version					0.0.1
-//	@host						https://api.sellspot.com.ua
+//	@host						api.sellspot.com.ua
 //	@description				Swagger documentation for Marketplace application API
 //	@securityDefinitions.apikey	ApiKeyAuth
 //	@in							header
