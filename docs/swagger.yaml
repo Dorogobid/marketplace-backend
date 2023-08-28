@@ -35,7 +35,7 @@ definitions:
       sort_index:
         type: integer
     type: object
-host: https://api.sellspot.com.ua
+host: api.sellspot.com.ua
 info:
   contact: {}
   description: Swagger documentation for Marketplace application API
