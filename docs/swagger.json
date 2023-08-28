@@ -6,7 +6,7 @@
         "contact": {},
         "version": "0.0.1"
     },
-    "host": "api.sellspot.com.ua:8080",
+    "host": "https://api.sellspot.com.ua",
     "paths": {
         "/api/v1/category": {
             "get": {
