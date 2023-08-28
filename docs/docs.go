@@ -445,7 +445,7 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "0.0.1",
-	Host:             "api.sellspot.com.ua:8080",
+	Host:             "https://api.sellspot.com.ua",
 	BasePath:         "",
 	Schemes:          []string{},
 	Title:            "Marketplace application API",
