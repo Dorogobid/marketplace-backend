@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 
 	_ "github.com/lib/pq"
@@ -27,5 +28,5 @@ func Execute() {
 	service := svc.New(repo)
 
 	s := server.NewServer(service, conf.XAPIKey)
-	s.Logger().Fatal(s.Start(":80"))
+	s.Logger().Fatal(s.Start(fmt.Sprintf(":%s", conf.Port)))
 }

@@ -6,6 +6,7 @@ import (
 
 type Conf struct {
 	XAPIKey string
+	Port    string
 
 	DB DBConfig
 }
@@ -13,6 +14,7 @@ type Conf struct {
 func NewConf() Conf {
 	return Conf{
 		XAPIKey: os.Getenv("X_API_KEY"),
+		Port:    os.Getenv("PORT"),
 		DB: DBConfig{
 			Username: os.Getenv("POSTGRES_USER"),
 			Password: os.Getenv("POSTGRES_PASSWORD"),
