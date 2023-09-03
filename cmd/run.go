@@ -27,6 +27,6 @@ func Execute() {
 	repo := repository.New(db)
 	service := svc.New(repo)
 
-	s := server.NewServer(service, conf.XAPIKey)
+	s := server.NewServer(service, conf.XAPIKey, conf.BaseURL)
 	s.Logger().Fatal(s.Start(fmt.Sprintf(":%s", conf.Port)))
 }

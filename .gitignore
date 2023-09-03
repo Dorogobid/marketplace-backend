@@ -32,3 +32,4 @@ ops/environment
 # vendor
 vendor
 /.run/
+/static/
