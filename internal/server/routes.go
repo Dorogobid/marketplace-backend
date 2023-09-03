@@ -17,6 +17,7 @@ func (s *Server) setupRoutes() {
 			return key == s.xAPIKey, nil
 		}}))
 
+	apiG.POST("/upload", s.UploadFile)
 	apiG.GET("/category", s.ListCategories)
 	apiG.GET("/category/parent", s.GetParentCategoriesWithCount)
 	apiG.GET("/category/child", s.GetCategoriesWithCountByParentID)

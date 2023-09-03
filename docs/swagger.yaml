@@ -271,6 +271,39 @@ paths:
       summary: Get all active parent categories with child count
       tags:
       - Category
+  /api/v1/upload:
+    post:
+      description: Upload static file (pictures)
+      parameters:
+      - description: Static file
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/echo.HTTPError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/echo.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/echo.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/echo.HTTPError'
+      security:
+      - ApiKeyAuth: []
+      summary: Upload static file
+      tags:
+      - Static
 securityDefinitions:
   ApiKeyAuth:
     description: Authorization API key
