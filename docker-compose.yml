@@ -9,6 +9,8 @@ services:
       - 80:80
     depends_on:
       - postgresmp
+    volumes:
+      - ./static:/usr/src/app/static
     env_file:
       - ops/environment
 
